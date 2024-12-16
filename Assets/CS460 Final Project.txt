@@ -1,0 +1,94 @@
+CS460 Final Project
+
+Brainstorm:
+- I want to use Unity and Blender
+	- Unity for the renderer and Blender for the models
+- Do I want to make a game or an animated render?
+- If I make a 3D game:
+	- Pro:
+		- More interactive
+		- Could be fun
+		- Can count as one of the games I make before graduation 
+	- Con:
+		- A lot more coding
+		- Worrying about physics
+		- A lot more models have to be made in Blender
+
+-If I make an animated render:
+	- Pro:
+		- Less coding
+		- More creative freedom (I don't have to build around a game mechanic)
+		- Less physics
+		- Less blender models
+	- Con:
+		- More difficult
+		- less interactive
+- If I make an animated render you can interact with: (This one)
+	- Pro:
+		- More interactive than just an animation and less interactive than a game
+		- Same creative freedom as an animated render with the added freedom of how 
+		someone can interact with it
+		- A little more physics, but still manageable
+		- Same if not more blender models than just an animated model
+	- Con:
+		- The most work
+			- All the models, animations, and how the interactions will affect
+			the animation
+
+I'm gonna make an interactable animated model.
+If it looks like I won't finish in time, drop the interactable aspect
+
+Ideas:
+- What will it look like?
+	- A small village
+	- Low-poly
+	- Cartoonish
+	- Blocky (since I'm bad at modeling (for now))
+	- Could use AI models 
+- How will it move?
+	- Villagers walking around
+	- Semi-busy by default (can maybe change number of villagers to appear more or less busy)
+- What will interacting it do?
+	- Clicking on the screen will throw something
+	- If it hits anything, do the projective behavior
+	- If it hits a villager, the villager will ragdoll
+	- If it hits nothing, it will disappear after a while
+	- No matter what, the projectile will disappear after a while to help manage graphics
+	- Scroll-wheel: change object that gets thrown
+	- Different objects have different behaviors
+- How can you interact with it? Mouse? Keyboard? Any other way?
+	- Keep it simple. Just the mouse. That includes: position, clicking, scroll wheel
+- When something hits a building, destroy the building with equal force it got hit with
+- Types of projectiles:
+	- Boulder
+		- Big, powerful, and slow
+		- Does big damage when hits a building
+	- Tomato
+		- Small, weak, could be fast
+		- When hits anything, stops moving, splats, sticks to where it hit
+			- Becomes a child of what it hit, attaching it to the parent
+	- Bomb
+		- Medium, on a fuse, explodes
+		- Explodes in an AOE with some radius
+	- Arrow 
+		- Fast, only affects villagers
+		- Sticks to anything it hits
+Idea to make breaking buildings look better:
+- Don't use kinematics
+- Freeze all transformations
+- Add a slightly larger circle collider as trigger on all building parts
+- When a projectile enters the trigger, turn on all transformations
+
+Completed what? when?
+- Mouse interactions (placement and clicking) : 10/15
+- Throwing projectile (after clicking that spawns at mouse position) : 10/15
+- Basic colors so everything isn't white : 10/15
+- Other projectile prefabs (no special behaviors) : 10/16
+- Changing projectiles : 10/16
+- Destroying projectiles with a fade after some time : 10/17
+- Arrows point to where they are aimed : 10/20
+- Added all building models into models folder : 10/20
+- Added physics and collision to all breakable parts of the model : 10/20
+- Added destructive behavior to buildings : 10/20
+- Added more buildings and environment : 10/21
+- Allowed randomness for tree and grass spawning : 11/16
